@@ -14,7 +14,7 @@ const Book = ({book}) => {
   <div className="card-body">
     <div className="flex gap-3 flex-wrap">
         {
-            tags.map(tag=> <a className="work text-base text-[#23BE0A] p-3 rounded-3xl bg-[#23BE0A0D] rounded-xl text-center" key={tag}>{tag}</a>)
+            tags?.map(tag=> <a className="work text-base text-[#23BE0A] p-3 rounded-3xl bg-[#23BE0A0D] rounded-xl text-center" key={tag}>{tag}</a>)
         }
     </div>
     <h2 className="card-title Playfair font-bold text-2xl">{bookName}</h2>

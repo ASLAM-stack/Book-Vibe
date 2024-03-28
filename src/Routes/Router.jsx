@@ -8,6 +8,8 @@ import Home from "../Pages/Home";
 import ContactForm from "../Pages/ContactForm";
 import Blogs from "../Pages/Blogs";
 import BookDetails from "../Pages/BookDetails";
+import ReadBook from "../Pages/ReadBook";
+import WishList from "../Pages/WishList";
  
 
 export const router = createBrowserRouter([
@@ -18,7 +20,17 @@ export const router = createBrowserRouter([
       children:[
         {
           path:'/list_book',
-          element: <ListedBook></ListedBook>
+          element: <ListedBook></ListedBook>,
+          children:[
+            {
+              index:true,
+              element:<ReadBook></ReadBook>
+            },
+            {
+              path:"listofbooks",
+              element:<WishList></WishList>
+            }
+          ]
         },
         {
           index:true,
