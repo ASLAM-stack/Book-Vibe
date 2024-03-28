@@ -1,0 +1,103 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/rFJRBw1/The-Great-Gatsby.webp",
+    "review": "A captivating portrayal of the Jazz Age",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Classic Fiction",
+    "tags": [
+      "Fiction",
+      "Romance",
+      "Tragedy"
+    ],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 2,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://i.ibb.co/3vJ04pZ/1200px-To-Kill-a-Mockingbird-first-edition-cover.jpg",
+    "review": "A poignant exploration of racial injustice",
+    "totalPages": 281,
+    "rating": 4.8,
+    "category": "Classic Fiction",
+    "tags": [
+      "Fiction",
+      "Legal Drama"
+    ],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 3,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/JQ68sRf/1984.jpg",
+    "review": "A chilling dystopian vision of totalitarianism",
+    "totalPages": 328,
+    "rating": 4.7,
+    "category": "Science Fiction",
+    "tags": [
+      "Fiction",
+      "Dystopian",
+      "Political"
+    ],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 4,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://i.ibb.co/7SzL3J8/Pride-and-Prejudice.jpg",
+    "review": "An enduring tale of love and social hierarchy",
+    "totalPages": 279,
+    "rating": 4.6,
+    "category": "Classic Fiction",
+    "tags": [
+      "Fiction",
+      "Romance",
+      "Satire"
+    ],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  },
+  {
+    "bookId": 5,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/6Hrfg4n/The-Catcher-in-the-Rye.webp",
+    "review": "A poignant exploration of adolescent angst",
+    "totalPages": 277,
+    "rating": 4.4,
+    "category": "Coming-of-Age Fiction",
+    "tags": [
+      "Fiction",
+      "Psychological",
+      "Cultural"
+    ],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 6,
+    "bookName": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "image": "https://i.ibb.co/8mjXjL8/Harry-Potter-and-the-Philosopher-s-Stone.jpg",
+    "review": "A magical journey into the world of wizardry",
+    "totalPages": 309,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": [
+      "Fiction",
+      "Adventure",
+      "Magic"
+    ],
+    "publisher": "Bloomsbury",
+    "yearOfPublishing": 1997
+  }
+]
