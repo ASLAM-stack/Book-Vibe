@@ -3,13 +3,12 @@ import ListCard from "../Component/ListCard";
  
 
 const WishList = () => {
-    const books = localStorage.getItem('wish');
+    const books = JSON.parse(localStorage.getItem('wish'));
     console.log(books)
     
     return (
-        <div>
-            <div>
-                <h1>hi</h1>
+        <div className="mt-12 mb-12">
+            <div className="flex flex-col gap-5 justify-center items-center">
                 {
                     books.map(book => <ListCard book={book}></ListCard>)
                 }

@@ -49,10 +49,10 @@ const ListedBook = () => {
               </svg>
               <span>Wishlist Books</span>
             </Link>
-            <Outlet></Outlet>
+            
           </div>
           {/* tabs end  */}
-          
+          <Outlet></Outlet>
     </div>
     );
 };

@@ -10,6 +10,7 @@ import Blogs from "../Pages/Blogs";
 import BookDetails from "../Pages/BookDetails";
 import ReadBook from "../Pages/ReadBook";
 import WishList from "../Pages/WishList";
+import Statistics from "../Pages/Statistics";
  
 
 export const router = createBrowserRouter([
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
               element:<WishList></WishList>,
             }
           ]
+        },
+        {
+          path:'/statistics',
+          element: <Statistics></Statistics>
         },
         {
           index:true,
