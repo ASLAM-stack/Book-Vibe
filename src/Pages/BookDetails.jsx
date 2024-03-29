@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
+  import 'react-toastify/dist/ReactToastify.css';
  
 
 const BookDetails = () => {
@@ -13,34 +15,46 @@ const BookDetails = () => {
       setsingelBook(newBook);
     },[bookId,book])
     const {category,tags,rating,image,author,bookName,totalPages,publisher,review,yearOfPublishing} = singelBook;
-    const saveRead =  localStorage.getItem('read') || '[]';
-    const saveWish =  localStorage.getItem('read') || '[]';
-    console.log(saveRead,saveWish);
-    // const [readlist,setaReadlist] = useState([saveRead])
-    // const [Wishlist,setaWishlist] = useParams([saveWish])
-  //   const saveList =JSON.parse(localStorage.getItem('read') || "[]");
-  //   const saveWishList =JSON.parse(localStorage.getItem('wish') || "[]");
-  //   const [readlist,setaReadlist] =useState([saveList]);
-  //   const [wishlist,setaWishlist] =useState([saveWishList]);
-  //   const handleRead = (book) =>{
-  //     console.log(book);
-  //       const isExist = readlist.find(readBook => readBook.bookId == book.bookId)
-  //       if (!isExist) {
-            
-  //           setaReadlist([...readlist,...book])
-  //           const stringJson = JSON.stringify(...readlist);
-  //           localStorage.setItem('read',stringJson);
-  //       }
-	// }
-  //   const handleWish = (wisk) =>{
-  //       const isExistWish = wishlist.find(wishBook => wishBook.bookId == wisk.bookId)
-  //       if (!isExistWish) {
-            
-  //         setaWishlist([...wishlist,...wisk])
-  //           const stringJsonWish = JSON.stringify(...wishlist);
-  //           localStorage.setItem('wish',stringJsonWish);
-  //       }
-	// }
+    
+    const saveRead = JSON.parse(localStorage.getItem('read') || '[]');
+    const saveWish = JSON.parse(localStorage.getItem('wish') || '[]');
+    
+const [readlist,setaReadlist] = useState([...saveRead]);
+const [wishlist,setWishlist] = useState([...saveWish]);
+
+const handleRead = (book) =>{
+   
+  const isExist = readlist.find(b => b.bookId == book.bookId);
+  const isExistWishList =wishlist.filter(xbook => xbook.bookId !== book.bookId)
+
+  if(!isExist){
+    setaReadlist([...readlist,book])
+    setWishlist([...isExistWishList])
+    toast.success(`Added Read ${book.bookName}`)
+    
+  }
+  else{
+    toast.error(`Already Added ${book.bookName}`)
+  }
+  
+}
+const localRead = JSON.stringify(readlist);
+ localStorage.setItem('read',localRead)
+
+const handleWish =(wish)=>{
+  const isRead = readlist.find(b => b.bookId == wish.bookId)
+  const isExistWish = wishlist.find(w => w.bookId == wish.bookId);
+  if (!isExistWish && !isRead) {
+    setWishlist([...wishlist,wish])
+    toast.success(`Added Wishlist ${wish.bookName}`)
+  }
+  else{
+    toast.error(`Already Added in Read or Wishlist: ${wish.bookName}`)
+  }
+} 
+const loadWish = JSON.stringify(wishlist);
+localStorage.setItem('wish',loadWish);
+ 
 
  
     
@@ -77,11 +91,12 @@ const BookDetails = () => {
                     <p className="work text-base text-[#131313B3]">Rating: <span className="font-bold text-[#131313]">{rating}</span></p>
                   </div>
                   <div className=" flex gap-3">
-                    <a className="btn text-white work bg-transparent border-2 border-[rgba(19, 19, 19, 0.30)] text-red-500">Read</a>
-                    <a className="btn text-white work bg-[#59C6D2] hover:bg-amber-300">Wishlist</a>
+                    <a className="btn text-black work bg-transparent border-2 border-[rgba(19, 19, 19, 0.30)]" onClick={()=> handleRead(singelBook)}>Read</a>
+                    <a className="btn text-white work bg-[#59C6D2] hover:bg-amber-300" onClick={()=>handleWish(singelBook)}>Wishlist</a>
                     </div>
                 </div>
              </div>
+             <ToastContainer />
         </div>
     );
 };

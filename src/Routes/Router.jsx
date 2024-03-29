@@ -27,8 +27,8 @@ export const router = createBrowserRouter([
               element:<ReadBook></ReadBook>
             },
             {
-              path:"listofbooks",
-              element:<WishList></WishList>
+              path:'listofbooks',
+              element:<WishList></WishList>,
             }
           ]
         },
