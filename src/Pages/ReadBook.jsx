@@ -3,7 +3,7 @@ import ListCard from "../Component/ListCard";
  
 
 const ReadBook = () => {
-    const books = JSON.parse(localStorage.getItem('read'));
+    const books = JSON.parse(localStorage.getItem('read') || '[]');
     console.log(books)
     return (
         <div className="mt-12 mb-12">

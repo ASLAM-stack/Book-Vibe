@@ -3,7 +3,7 @@ import ListCard from "../Component/ListCard";
  
 
 const WishList = () => {
-    const books = JSON.parse(localStorage.getItem('wish'));
+    const books = JSON.parse(localStorage.getItem('wish') || '[]');
     console.log(books)
     
     return (
