@@ -4,10 +4,10 @@ import { Link, Outlet, json } from
 import { RiArrowDownSLine } from "react-icons/ri";
 
 const ListedBook = () => {
-  
-  
+   
+   
   const [tabIndex, setTabIndex] = useState(0);
-
+   
   return (
     <div>
       <div>
@@ -20,7 +20,7 @@ const ListedBook = () => {
         <div className="p-8 flex justify-center items-center">
           <div className="dropdown ">
             <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A] text-white">
-              Sort <RiArrowDownSLine />
+              Sort BY <RiArrowDownSLine />
             </div>
             <ul
               tabIndex={0}
@@ -44,8 +44,10 @@ const ListedBook = () => {
           <div className="flex items-center gap-4 md:gap-0 -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-wrap dark:bg-gray-100 dark:text-gray-800 w-[80%] p-4 md:p-0">
             <Link
               to=""
-              onClick={() =>
+              onClick={() =>{
                 setTabIndex(0)
+                
+              }
                 
               } 
               rel="noopener noreferrer"
@@ -70,7 +72,12 @@ const ListedBook = () => {
             </Link>
             <Link
               to={`listofbooks`}
-              onClick={() => setTabIndex(1)}
+              onClick={() =>{
+                setTabIndex(1)
+                 
+              }
+                
+              } 
               rel="noopener noreferrer"
               className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
                 tabIndex === 1 ? "border border-b-0" : "bordder-b"

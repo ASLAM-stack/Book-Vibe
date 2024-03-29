@@ -4,7 +4,7 @@ import ListCard from "../Component/ListCard";
 
 const WishList = () => {
     const books = JSON.parse(localStorage.getItem('wish') || '[]');
-    console.log(books)
+     
     
     return (
         <div className="mt-12 mb-12">

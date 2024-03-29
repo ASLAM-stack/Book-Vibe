@@ -3,7 +3,7 @@ import { IoPeopleOutline } from "react-icons/io5";
 import { MdContactPage } from "react-icons/md";
 import { Link } from "react-router-dom";
 const ListCard = ({ book }) => {
-  console.log(book);
+   
   const {
     category,
     tags,
