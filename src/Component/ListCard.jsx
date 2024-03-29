@@ -14,7 +14,7 @@ const ListCard = ({ book }) => {
     totalPages,
     publisher,
     review,
-    yearOfPublishing,
+    yearOfPublishing,bookId
   } = book;
   return (
     <div className="card card-side bg-base-100 shadow-xl p-8 border-2 flex-col md:flex-row">
@@ -90,10 +90,10 @@ const ListCard = ({ book }) => {
               Ratings:{rating}
             </a>
           </div>
-           <div className="px-4 py-2 bg-[#45b434] text-white flex items-center justify-center rounded-full">
+           <Link to={`/book/${bookId}`} className="px-4 py-2 bg-[#45b434] text-white flex items-center justify-center rounded-full">
            <a 
            >View Details</a>
-           </div>
+           </Link>
         </div>
       </div>
     </div>
